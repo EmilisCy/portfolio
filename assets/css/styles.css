@@ -1185,7 +1185,7 @@ width: 55px;
   .about__container,
   .projects__containe,
   .home__icon {
-    grid-template-columns: 20px;
+    grid-template-columns: 350px;
     justify-content: center;
      ;
   }
