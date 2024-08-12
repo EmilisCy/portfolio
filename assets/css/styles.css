@@ -704,12 +704,12 @@ width: 55px;
 
 /*=============== SERVICES ===============*/
 .services__container {
-  display: grid;
-  grid-template-columns: 250px; /* Default to single column layout */
+  display: grid; /* Create a grid layout */
   justify-content: center; /* Center items horizontally */
   row-gap: 1rem; /* Space between rows */
   padding-top: 1rem; /* Space at the top */
   gap: 2rem; /* Gap between grid items */
+  text-align: center; /* Center text */
 }
 
 .services__card {
@@ -720,7 +720,7 @@ width: 55px;
   height: 100%;
   background-color: var(--body-color);
   border: 4px solid var(--black-color);
-  padding: 6rem 1rem 3rem;
+  padding: 4rem 2rem 4rem;
   z-index: 5;
   position: relative;
   transition: background-color .4s, border .4s; /* for dark mode */
@@ -770,6 +770,8 @@ width: 55px;
 .projects {
   background-color: var(--container-color);
   transition: background-color .4s; /* for dark mode */
+  display: grid;
+  justify-content: center;
 }
 
 .projects__container {
@@ -1467,10 +1469,16 @@ width: 55px;
   }
 
   .services__container {
-    grid-template-columns: repeat(4, 282px);
+    grid-template-columns: repeat(3, 282px);
     column-gap: 0.5rem;
     padding-block: 3rem 5rem;
   }
+
+  .services__container > :nth-child(4) {
+    grid-column: 2 / 3; /* Position the fourth item in the center column */
+    justify-self: center; /* Center the fourth item within its grid cell */
+}
+
   .services__content {
     padding: 6.5rem 1.5rem 3.5rem;
     border: 6px solid var(--black-color);
@@ -1493,6 +1501,10 @@ width: 55px;
     grid-template-columns: repeat(3, 352px);
     padding-block: 3rem 1rem;
   }
+  .projects__container > :nth-child(4) {
+    grid-column: 2 / 3; /* Position the fourth item in the center column */
+    justify-self: center; /* Center the fourth item within its grid cell */
+}
   .projects__card {
     padding: 1.25rem 1.25rem 2.5rem;
   }
