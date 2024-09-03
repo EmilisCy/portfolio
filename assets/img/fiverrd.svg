@@ -3,9 +3,9 @@
     <defs>
         <style>
             .cls-1 {
-                fill: none; /* Transparent fill */
+                fill: White; /* Transparent fill */
                 stroke: #000000; /* White stroke */
-                stroke-miterlimit: 10;
+                stroke-miterlimit: 20px;
                 stroke-width: 9px; /* Increased stroke width */
             }
         </style>
